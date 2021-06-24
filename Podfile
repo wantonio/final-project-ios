@@ -6,6 +6,6 @@ target 'final-project-ios' do
   use_frameworks!
 
   # Pods for final-project-ios
-  pod 'Material'
+  # pod 'Material'
 
 end

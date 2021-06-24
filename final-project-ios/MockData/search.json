@@ -1,0 +1,347 @@
+{
+    "results": [
+        {
+            "id": 638512,
+            "title": "Chickpea-Tomato Soup With Fresh Rosemary",
+            "image": "https://spoonacular.com/recipeImages/638512-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 142.808,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 5.7472,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 5.28457,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 20.9526,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 729531,
+            "title": "Roasted Lemon Pepper Pork Tenderloin with Cornbread Stuffing",
+            "image": "https://spoonacular.com/recipeImages/729531-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 416.449,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 41.8401,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 16.7513,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 23.5889,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 641025,
+            "title": "Cuke & Radish Sandwich with Lemon-Herb Goat Cheese Spread",
+            "image": "https://spoonacular.com/recipeImages/641025-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 390.315,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 15.6733,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 27.382,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 21.1376,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 633105,
+            "title": "Autumn Salad",
+            "image": "https://spoonacular.com/recipeImages/633105-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 747.084,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 31.3275,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 46.7378,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 57.8375,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 661223,
+            "title": "Spicy Vegan Chili",
+            "image": "https://spoonacular.com/recipeImages/661223-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 241.568,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 12.7264,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 8.58843,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 30.6473,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 649431,
+            "title": "Leek and Mushroom Quiche",
+            "image": "https://spoonacular.com/recipeImages/649431-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 455.314,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 18.1973,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 26.5476,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 36.9346,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 715452,
+            "title": "Delicious Triple Chocolate Bundt Cake",
+            "image": "https://spoonacular.com/recipeImages/715452-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 501.543,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 7.06333,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 14.7782,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 86.7987,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 640666,
+            "title": "Creamy Mushrooms Over Soba Noodles (Vegan)",
+            "image": "https://spoonacular.com/recipeImages/640666-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 587.813,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 23.4176,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 23.563,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 78.3466,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 658936,
+            "title": "S'more Bars",
+            "image": "https://spoonacular.com/recipeImages/658936-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 557.111,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 3.93837,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 23.5709,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 84.4555,
+                        "unit": "g"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 633337,
+            "title": "Bacon Wrapped Dates with Manchego, Romesco Sauce",
+            "image": "https://spoonacular.com/recipeImages/633337-312x231.jpg",
+            "imageType": "jpg",
+            "nutrition": {
+                "nutrients": [
+                    {
+                        "title": "Calories",
+                        "name": "Calories",
+                        "amount": 276.855,
+                        "unit": "kcal"
+                    },
+                    {
+                        "title": "Protein",
+                        "name": "Protein",
+                        "amount": 7.64741,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Fat",
+                        "name": "Fat",
+                        "amount": 18.4204,
+                        "unit": "g"
+                    },
+                    {
+                        "title": "Carbohydrates",
+                        "name": "Carbohydrates",
+                        "amount": 21.7768,
+                        "unit": "g"
+                    }
+                ]
+            }
+        }
+    ],
+    "offset": 0,
+    "number": 10,
+    "totalResults": 4821
+}

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,17 @@
 		58F083722681871E00C89642 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F083702681871E00C89642 /* Main.storyboard */; };
 		58F083742681871F00C89642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F083732681871F00C89642 /* Assets.xcassets */; };
 		58F083772681871F00C89642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58F083752681871F00C89642 /* LaunchScreen.storyboard */; };
+		58F083802684053C00C89642 /* JSONLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 58F0837F2684053C00C89642 /* JSONLoader */; };
+		58F083882684107700C89642 /* SearchRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083872684107700C89642 /* SearchRes.swift */; };
+		58F0838C2684155000C89642 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 58F0838B2684155000C89642 /* search.json */; };
+		58F0838E2684156D00C89642 /* Nutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0838D2684156D00C89642 /* Nutrient.swift */; };
+		58F08390268415EB00C89642 /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0838F268415EB00C89642 /* Nutrition.swift */; };
+		58F083922684191400C89642 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = 58F083912684191400C89642 /* recipe.json */; };
+		58F083942684193100C89642 /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083932684193100C89642 /* RecipeInfo.swift */; };
+		58F0839626841A6500C89642 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839526841A6500C89642 /* Instructions.swift */; };
+		58F0839826841A7100C89642 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839726841A7100C89642 /* Step.swift */; };
+		58F0839A26841B6100C89642 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839926841B6100C89642 /* Equipment.swift */; };
+		58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839B26841C5A00C89642 /* Ingridient.swift */; };
 		EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +36,16 @@
 		58F083732681871F00C89642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58F083762681871F00C89642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58F083782681871F00C89642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58F083872684107700C89642 /* SearchRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRes.swift; sourceTree = "<group>"; };
+		58F0838B2684155000C89642 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		58F0838D2684156D00C89642 /* Nutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrient.swift; sourceTree = "<group>"; };
+		58F0838F268415EB00C89642 /* Nutrition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
+		58F083912684191400C89642 /* recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipe.json; sourceTree = "<group>"; };
+		58F083932684193100C89642 /* RecipeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
+		58F0839526841A6500C89642 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
+		58F0839726841A7100C89642 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		58F0839926841B6100C89642 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		58F0839B26841C5A00C89642 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
 		912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F58D07182ACC2623DC18B7B /* Pods-final-project-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.debug.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		AC498B95B8C61BA2069F3178 /* Pods-final-project-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.release.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -36,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */,
+				58F083802684053C00C89642 /* JSONLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +78,6 @@
 				9F58D07182ACC2623DC18B7B /* Pods-final-project-ios.debug.xcconfig */,
 				AC498B95B8C61BA2069F3178 /* Pods-final-project-ios.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +102,8 @@
 		58F083692681871E00C89642 /* final-project-ios */ = {
 			isa = PBXGroup;
 			children = (
+				58F083862684105C00C89642 /* Models */,
+				58F083832684077D00C89642 /* MockData */,
 				58F0836A2681871E00C89642 /* AppDelegate.swift */,
 				58F0836C2681871E00C89642 /* SceneDelegate.swift */,
 				58F0836E2681871E00C89642 /* ViewController.swift */,
@@ -90,6 +113,30 @@
 				58F083782681871F00C89642 /* Info.plist */,
 			);
 			path = "final-project-ios";
+			sourceTree = "<group>";
+		};
+		58F083832684077D00C89642 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				58F0838B2684155000C89642 /* search.json */,
+				58F083912684191400C89642 /* recipe.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		58F083862684105C00C89642 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58F083872684107700C89642 /* SearchRes.swift */,
+				58F0838D2684156D00C89642 /* Nutrient.swift */,
+				58F0838F268415EB00C89642 /* Nutrition.swift */,
+				58F083932684193100C89642 /* RecipeInfo.swift */,
+				58F0839526841A6500C89642 /* Instructions.swift */,
+				58F0839726841A7100C89642 /* Step.swift */,
+				58F0839926841B6100C89642 /* Equipment.swift */,
+				58F0839B26841C5A00C89642 /* Ingridient.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,13 +150,15 @@
 				58F083632681871E00C89642 /* Sources */,
 				58F083642681871E00C89642 /* Frameworks */,
 				58F083652681871E00C89642 /* Resources */,
-				12E7F95769FC24E3B1E79171 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "final-project-ios";
+			packageProductDependencies = (
+				58F0837F2684053C00C89642 /* JSONLoader */,
+			);
 			productName = "final-project-ios";
 			productReference = 58F083672681871E00C89642 /* final-project-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -137,6 +186,9 @@
 				Base,
 			);
 			mainGroup = 58F0835E2681871E00C89642;
+			packageReferences = (
+				58F0837E2684053B00C89642 /* XCRemoteSwiftPackageReference "JSONLoader" */,
+			);
 			productRefGroup = 58F083682681871E00C89642 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,7 +203,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F083922684191400C89642 /* recipe.json in Resources */,
 				58F083772681871F00C89642 /* LaunchScreen.storyboard in Resources */,
+				58F0838C2684155000C89642 /* search.json in Resources */,
 				58F083742681871F00C89642 /* Assets.xcassets in Resources */,
 				58F083722681871E00C89642 /* Main.storyboard in Resources */,
 			);
@@ -160,23 +214,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12E7F95769FC24E3B1E79171 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-final-project-ios/Pods-final-project-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-final-project-ios/Pods-final-project-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-final-project-ios/Pods-final-project-ios-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4C71782471D3A8A4E90BDEBF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,8 +244,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F0836F2681871E00C89642 /* ViewController.swift in Sources */,
+				58F0839626841A6500C89642 /* Instructions.swift in Sources */,
+				58F0839A26841B6100C89642 /* Equipment.swift in Sources */,
 				58F0836B2681871E00C89642 /* AppDelegate.swift in Sources */,
+				58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */,
+				58F08390268415EB00C89642 /* Nutrition.swift in Sources */,
+				58F0838E2684156D00C89642 /* Nutrient.swift in Sources */,
+				58F083882684107700C89642 /* SearchRes.swift in Sources */,
 				58F0836D2681871E00C89642 /* SceneDelegate.swift in Sources */,
+				58F0839826841A7100C89642 /* Step.swift in Sources */,
+				58F083942684193100C89642 /* RecipeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +455,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58F0837E2684053B00C89642 /* XCRemoteSwiftPackageReference "JSONLoader" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/withertech/JSONLoader.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58F0837F2684053C00C89642 /* JSONLoader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58F0837E2684053B00C89642 /* XCRemoteSwiftPackageReference "JSONLoader" */;
+			productName = JSONLoader;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58F0835F2681871E00C89642 /* Project object */;
 }

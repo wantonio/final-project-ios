@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "JSONLoader",
+        "repositoryURL": "https://github.com/withertech/JSONLoader.git",
+        "state": {
+          "branch": "master",
+          "revision": "de6d971524b3767036c114cfce32f51f6357eadb",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
