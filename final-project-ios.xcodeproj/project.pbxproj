@@ -24,6 +24,8 @@
 		58F0839826841A7100C89642 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839726841A7100C89642 /* Step.swift */; };
 		58F0839A26841B6100C89642 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839926841B6100C89642 /* Equipment.swift */; };
 		58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839B26841C5A00C89642 /* Ingridient.swift */; };
+		631262A6268589BD0012B65C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631262A5268589BD0012B65C /* SearchViewController.swift */; };
+		631262A92685A89A0012B65C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 631262A82685A89A0012B65C /* Kingfisher */; };
 		EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,7 @@
 		58F0839726841A7100C89642 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		58F0839926841B6100C89642 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		58F0839B26841C5A00C89642 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
+		631262A5268589BD0012B65C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F58D07182ACC2623DC18B7B /* Pods-final-project-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.debug.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		AC498B95B8C61BA2069F3178 /* Pods-final-project-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.release.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631262A92685A89A0012B65C /* Kingfisher in Frameworks */,
 				EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */,
 				58F083802684053C00C89642 /* JSONLoader in Frameworks */,
 			);
@@ -111,6 +115,7 @@
 				58F083732681871F00C89642 /* Assets.xcassets */,
 				58F083752681871F00C89642 /* LaunchScreen.storyboard */,
 				58F083782681871F00C89642 /* Info.plist */,
+				631262A5268589BD0012B65C /* SearchViewController.swift */,
 			);
 			path = "final-project-ios";
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			name = "final-project-ios";
 			packageProductDependencies = (
 				58F0837F2684053C00C89642 /* JSONLoader */,
+				631262A82685A89A0012B65C /* Kingfisher */,
 			);
 			productName = "final-project-ios";
 			productReference = 58F083672681871E00C89642 /* final-project-ios.app */;
@@ -188,6 +194,7 @@
 			mainGroup = 58F0835E2681871E00C89642;
 			packageReferences = (
 				58F0837E2684053B00C89642 /* XCRemoteSwiftPackageReference "JSONLoader" */,
+				631262A72685A89A0012B65C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 58F083682681871E00C89642 /* Products */;
 			projectDirPath = "";
@@ -249,6 +256,7 @@
 				58F0836B2681871E00C89642 /* AppDelegate.swift in Sources */,
 				58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */,
 				58F08390268415EB00C89642 /* Nutrition.swift in Sources */,
+				631262A6268589BD0012B65C /* SearchViewController.swift in Sources */,
 				58F0838E2684156D00C89642 /* Nutrient.swift in Sources */,
 				58F083882684107700C89642 /* SearchRes.swift in Sources */,
 				58F0836D2681871E00C89642 /* SceneDelegate.swift in Sources */,
@@ -465,6 +473,14 @@
 				kind = branch;
 			};
 		};
+		631262A72685A89A0012B65C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -472,6 +488,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58F0837E2684053B00C89642 /* XCRemoteSwiftPackageReference "JSONLoader" */;
 			productName = JSONLoader;
+		};
+		631262A82685A89A0012B65C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 631262A72685A89A0012B65C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

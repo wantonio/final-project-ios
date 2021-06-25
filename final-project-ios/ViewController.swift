@@ -7,6 +7,7 @@
 
 import UIKit
 import JSONLoader
+import Kingfisher
 
 class RecipeTableViewCell: UITableViewCell {
    
@@ -41,13 +42,11 @@ class ViewController: UIViewController {
         } catch let err {
             print(err.localizedDescription)
         }
+
     }
     
+  
     
-    @IBAction func btnSearchRecipe(_ sender: Any) {
-        let filterStr = textFieldSearch.text
-        lRecipes = lRecipes?.filter { $0.title.contains(filterStr!) }
-    }
 }
             
 
@@ -66,8 +65,11 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
         let cell = tableViewRecipes.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)as! RecipeTableViewCell
         
         let recipesData = lRecipes?[indexPath.row]
+        
+        let url = URL(string: recipesData!.image)
+        cell.imageViewCell.kf.setImage(with: url)
+        
         cell.lblTitleRecipe?.text = recipesData?.title
-        cell.imageViewCell?.image = UIImage(named: recipesData!.image)
         cell.lblFatRecipe?.text =  "Fat:"
         cell.lblCarbsRecipe?.text = "Carbs:"
         cell.lblProteinRecipe?.text = "Prot:"
@@ -77,4 +79,3 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
-
