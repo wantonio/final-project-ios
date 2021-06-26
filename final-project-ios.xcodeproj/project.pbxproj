@@ -24,6 +24,12 @@
 		58F0839826841A7100C89642 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839726841A7100C89642 /* Step.swift */; };
 		58F0839A26841B6100C89642 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839926841B6100C89642 /* Equipment.swift */; };
 		58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F0839B26841C5A00C89642 /* Ingridient.swift */; };
+		58F083B72686CDF500C89642 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083B52686CDF500C89642 /* Encodable.swift */; };
+		58F083B82686CDF500C89642 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083B62686CDF500C89642 /* Dictionary.swift */; };
+		58F083BC2686CE0B00C89642 /* NetworkGenerics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083BA2686CE0B00C89642 /* NetworkGenerics.swift */; };
+		58F083BD2686CE0B00C89642 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083BB2686CE0B00C89642 /* ApiError.swift */; };
+		58F083C02686CE1300C89642 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083BF2686CE1300C89642 /* Client.swift */; };
+		58F083C22686CE3800C89642 /* SearchQueryParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083C12686CE3800C89642 /* SearchQueryParam.swift */; };
 		631262A6268589BD0012B65C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631262A5268589BD0012B65C /* SearchViewController.swift */; };
 		631262A92685A89A0012B65C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 631262A82685A89A0012B65C /* Kingfisher */; };
 		EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */; };
@@ -48,6 +54,12 @@
 		58F0839726841A7100C89642 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		58F0839926841B6100C89642 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		58F0839B26841C5A00C89642 /* Ingridient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingridient.swift; sourceTree = "<group>"; };
+		58F083B52686CDF500C89642 /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		58F083B62686CDF500C89642 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		58F083BA2686CE0B00C89642 /* NetworkGenerics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkGenerics.swift; sourceTree = "<group>"; };
+		58F083BB2686CE0B00C89642 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		58F083BF2686CE1300C89642 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		58F083C12686CE3800C89642 /* SearchQueryParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQueryParam.swift; sourceTree = "<group>"; };
 		631262A5268589BD0012B65C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F58D07182ACC2623DC18B7B /* Pods-final-project-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.debug.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +118,9 @@
 		58F083692681871E00C89642 /* final-project-ios */ = {
 			isa = PBXGroup;
 			children = (
+				58F083BE2686CE1300C89642 /* NetworkEndpoints */,
+				58F083B92686CE0B00C89642 /* Network */,
+				58F083B42686CDF500C89642 /* Extentions */,
 				58F083862684105C00C89642 /* Models */,
 				58F083832684077D00C89642 /* MockData */,
 				58F0836A2681871E00C89642 /* AppDelegate.swift */,
@@ -132,6 +147,7 @@
 		58F083862684105C00C89642 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				58F083C12686CE3800C89642 /* SearchQueryParam.swift */,
 				58F083872684107700C89642 /* SearchRes.swift */,
 				58F0838D2684156D00C89642 /* Nutrient.swift */,
 				58F0838F268415EB00C89642 /* Nutrition.swift */,
@@ -142,6 +158,32 @@
 				58F0839B26841C5A00C89642 /* Ingridient.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		58F083B42686CDF500C89642 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				58F083B52686CDF500C89642 /* Encodable.swift */,
+				58F083B62686CDF500C89642 /* Dictionary.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		58F083B92686CE0B00C89642 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				58F083BA2686CE0B00C89642 /* NetworkGenerics.swift */,
+				58F083BB2686CE0B00C89642 /* ApiError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		58F083BE2686CE1300C89642 /* NetworkEndpoints */ = {
+			isa = PBXGroup;
+			children = (
+				58F083BF2686CE1300C89642 /* Client.swift */,
+			);
+			path = NetworkEndpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +294,8 @@
 			files = (
 				58F0836F2681871E00C89642 /* ViewController.swift in Sources */,
 				58F0839626841A6500C89642 /* Instructions.swift in Sources */,
+				58F083B72686CDF500C89642 /* Encodable.swift in Sources */,
+				58F083BC2686CE0B00C89642 /* NetworkGenerics.swift in Sources */,
 				58F0839A26841B6100C89642 /* Equipment.swift in Sources */,
 				58F0836B2681871E00C89642 /* AppDelegate.swift in Sources */,
 				58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */,
@@ -259,8 +303,12 @@
 				631262A6268589BD0012B65C /* SearchViewController.swift in Sources */,
 				58F0838E2684156D00C89642 /* Nutrient.swift in Sources */,
 				58F083882684107700C89642 /* SearchRes.swift in Sources */,
+				58F083C02686CE1300C89642 /* Client.swift in Sources */,
 				58F0836D2681871E00C89642 /* SceneDelegate.swift in Sources */,
+				58F083B82686CDF500C89642 /* Dictionary.swift in Sources */,
+				58F083BD2686CE0B00C89642 /* ApiError.swift in Sources */,
 				58F0839826841A7100C89642 /* Step.swift in Sources */,
+				58F083C22686CE3800C89642 /* SearchQueryParam.swift in Sources */,
 				58F083942684193100C89642 /* RecipeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
