@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Nutrient: Codable {
+struct Nutrients: Codable {
     var title: String
     var name: String
     var amount: Float

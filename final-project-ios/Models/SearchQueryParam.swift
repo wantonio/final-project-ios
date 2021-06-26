@@ -9,19 +9,19 @@ import Foundation
 
 struct SearchQueryParam: Codable {
     var query: String?
-    var sort: String?
+    //var sort: String?
     var number: Int
     var minFat: Int?
-    var maxFat: Int? = 0
+    //var maxFat: Int? = 0
     var minCarbs: Int?
-    var maxCarbs: Int?
+    //var maxCarbs: Int?
     var minProtein: Int?
-    var maxProtein: Int?
+    // var maxProtein: Int?
     var minCalories: Int?
-    var maxCalories: Int?
+    //var maxCalories: Int?
     
     var dictonaryDefault: [String: Any] {
-        let params = ["minFat", "minCarbs", "minProtein", "minCalories"]
+       let params = ["minFat", "minCarbs", "minProtein", "minCalories"]
         let queryParams = self.dictionary
         var newDictioney = [String: Any]().merging(queryParams) {dictionaryOne, _ in dictionaryOne}
         
@@ -30,7 +30,7 @@ struct SearchQueryParam: Codable {
             if let _ = queryParams[value] {}
             else {
                 newDictioney[value] = 0
-            }
+           }
         }
         
         return newDictioney

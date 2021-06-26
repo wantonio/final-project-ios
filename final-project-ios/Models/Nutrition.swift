@@ -8,5 +8,5 @@
 import Foundation
 
 struct Nutrition: Codable {
-    var nutrients: [Nutrient]
+    var nutrients: [Nutrients]
 }
