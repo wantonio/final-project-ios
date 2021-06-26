@@ -117,6 +117,23 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cNn-KW-7Rh">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" systemItem="add" id="hy9-YU-mJR">
+                                <connections>
+                                    <action selector="addAnotacion:" destination="BYZ-38-t0r" id="df6-vJ-jMR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="mjh-iT-cW8">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yxu-8w-z6W">
+                                    <rect key="frame" x="60.666666666666657" y="7" width="92" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="didTapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqx-Il-UKd"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="EEn-wJ-ApQ">
                             <connections>
                                 <segue destination="IDY-Ag-Kiv" kind="presentation" modalPresentationStyle="overCurrentContext" id="oBF-k4-bFt"/>
