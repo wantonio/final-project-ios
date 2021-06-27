@@ -121,7 +121,7 @@
                     <navigationItem key="navigationItem" title="Home" id="cNn-KW-7Rh">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="EEn-wJ-ApQ">
                             <connections>
-                                <segue destination="IDY-Ag-Kiv" kind="presentation" modalPresentationStyle="overCurrentContext" id="oBF-k4-bFt"/>
+                                <segue destination="IDY-Ag-Kiv" kind="presentation" identifier="getDataSegue" modalPresentationStyle="overCurrentContext" id="oBF-k4-bFt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -20,6 +20,7 @@ class RecipeTableViewCell: UITableViewCell {
 }
 
 class ViewController: UIViewController {
+    
 
     var client:Client?
     let session = URLSession.shared
@@ -55,9 +56,15 @@ class ViewController: UIViewController {
                 print(error)
             }
         })
-        
-            
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "getDataSegue" {
+                let secondVC: SearchViewController = segue.destination as! SearchViewController
+                secondVC.delegate = self
+            }
+        }
 }
 
 extension ViewController:UITableViewDelegate, UITableViewDataSource {
@@ -109,11 +116,37 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
         cell.imageViewCell.kf.setImage(with: url)
         cell.lblTitleRecipe?.text = recipesData?.title
         cell.lblFatRecipe?.text =  "Fat: " + String(format: "%.2f", _fatQty)
-        cell.lblCarbsRecipe?.text = "Carbs: " + String(format: "%.2f", _fatQty)
+        cell.lblCarbsRecipe?.text = "Carbs: " + String(format: "%.2f", _carbsQty)
         cell.lblProteinRecipe?.text = "Prot: " + String(format: "%.2f", _protQty)
         cell.lblCaloriesRecipe?.text = "Cal: " + String(format: "%.2f", _calQty)
         
         
         return cell
+    }
+}
+
+extension ViewController:queryDelegate{
+    func updateQuerySearch(querySearch:SearchQueryParam?)
+    {
+        self.queryInfo = querySearch
+        lRecipes = [RecipeInfo]()
+        client = Client(session: session)
+        client?.search(queryParams: queryInfo!, complete: { result in
+            switch result{
+            
+            case .success(let dataSearch):
+                
+                for datos in dataSearch.results{
+                    
+                    self.lRecipes?.append(RecipeInfo(id: datos.id, title: datos.title, image: datos.image, imageType: datos.imageType, nutrition: datos.nutrition, summary: datos.summary, diets: datos.diets, analyzedInstructions: datos.analyzedInstructions, extendedIngredients: datos.extendedIngredients))
+                    
+                }
+                
+                print(dataSearch)
+                    
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 }
