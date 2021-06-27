@@ -13,6 +13,7 @@ struct RecipeInfo: Codable {
     var image: String
     var imageType: String
     var nutrition: Nutrition
+    var servings: Int?
     var summary: String?
     var diets: [String]?
     var analyzedInstructions: [Instructions]?
