@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     
     // agregar anotacion
     @IBAction func addAnotacion(_ sender: Any) {
-        let alert = UIAlertController(title: "Nueva anotacion", message: "Agregue una anotacion a la recenta", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Nueva anotacion", message: "Agregue una anotacion a la receta", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Guardar", style: .default) { action in
             guard let textField = alert.textFields?.first, let anotacion = textField.text else {
                 return

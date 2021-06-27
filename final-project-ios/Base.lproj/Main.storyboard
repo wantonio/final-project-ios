@@ -118,7 +118,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cNn-KW-7Rh">
                         <leftBarButtonItems>
-                            <barButtonItem title="Item" systemItem="add" id="hy9-YU-mJR">
+                            <barButtonItem title="Agregar anotacion" id="hy9-YU-mJR">
                                 <connections>
                                     <action selector="addAnotacion:" destination="BYZ-38-t0r" id="df6-vJ-jMR"/>
                                 </connections>
