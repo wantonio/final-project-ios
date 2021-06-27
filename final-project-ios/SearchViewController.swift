@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var popupView: UIView!
@@ -20,6 +21,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var txtQueryProteinMaxField: UITextField!
     @IBOutlet weak var txtQueryCaloriesMinField: UITextField!
     @IBOutlet weak var txtQueryCaloriesMaxField: UITextField!
+    var delegate: queryDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +32,17 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func btnSearchFilters(_ sender: Any) {
-        //var filterSearch: SearchQueryParam
-       // filterSearch = SearchQueryParam(query: txtQueryField.text,
-                //                        sort: <#T##String?#>,
-                  //                      number: 50,
-                   //                     minFat: Int?,
-                       ///                 maxFat: Int?,minCarbs: Int?,maxCarbs: <#T##Int?#>,
-                         //               minProtein: <#T##Int?#>,maxProtein: <#T##Int?#>,minCalories: <#T##Int?#>, maxCalories: <#T##Int?#>)
+        let filterSearch: SearchQueryParam
+        filterSearch = SearchQueryParam(query: txtQueryField.text, number: 100,
+                                        minFat: Int(txtQueryFatMinField.text!),
+                                        minCarbs: Int(txtQueryCarbsMinField.text!),
+                                        minProtein: Int(txtQueryProteinMinField.text!),
+                                        minCalories: Int(txtQueryCaloriesMinField.text!))
+       
+        if self.delegate != nil {
+            self.delegate?.updateQuerySearch(querySearch: filterSearch)
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     
