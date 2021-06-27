@@ -130,7 +130,7 @@
 		58F083692681871E00C89642 /* final-project-ios */ = {
 			isa = PBXGroup;
 			children = (
-				58F083C92687EA7700C89642 /* Protocol */,
+				58F083C92687EA7700C89642 /* Protocols */,
 				58F083BE2686CE1300C89642 /* NetworkEndpoints */,
 				58F083B92686CE0B00C89642 /* Network */,
 				58F083B42686CDF500C89642 /* Extentions */,
@@ -204,12 +204,12 @@
 			path = NetworkEndpoints;
 			sourceTree = "<group>";
 		};
-		58F083C92687EA7700C89642 /* Protocol */ = {
+		58F083C92687EA7700C89642 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -101,6 +101,7 @@ extension DetailViewController: UITabBarDelegate {
         }, completion: {
             _ in
             self.currentTabPanel.isHidden = true
+            tabPanel.alpha = 0.0
             tabPanel.isHidden = false
             self.currentTabPanel = tabPanel
             
