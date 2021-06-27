@@ -125,9 +125,9 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="mjh-iT-cW8">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yxu-8w-z6W">
-                                    <rect key="frame" x="60.666666666666657" y="7" width="92" height="30"/>
+                                    <rect key="frame" x="60.666666666666657" y="7" width="161" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="Agregar foto a la receta"/>
                                     <connections>
                                         <action selector="didTapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqx-Il-UKd"/>
                                     </connections>
