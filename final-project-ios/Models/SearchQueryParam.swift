@@ -9,16 +9,16 @@ import Foundation
 
 struct SearchQueryParam: Codable {
     var query: String?
-    //var sort: String?
+    var sort: String?
     var number: Int
     var minFat: Int?
-    //var maxFat: Int? = 0
+    var maxFat: Int?
     var minCarbs: Int?
-    //var maxCarbs: Int?
+    var maxCarbs: Int?
     var minProtein: Int?
-    // var maxProtein: Int?
+    var maxProtein: Int?
     var minCalories: Int?
-    //var maxCalories: Int?
+    var maxCalories: Int?
     
     var dictonaryDefault: [String: Any] {
        let params = ["minFat", "minCarbs", "minProtein", "minCalories"]

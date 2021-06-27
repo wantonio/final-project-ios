@@ -30,6 +30,12 @@
 		58F083BD2686CE0B00C89642 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083BB2686CE0B00C89642 /* ApiError.swift */; };
 		58F083C02686CE1300C89642 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083BF2686CE1300C89642 /* Client.swift */; };
 		58F083C22686CE3800C89642 /* SearchQueryParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083C12686CE3800C89642 /* SearchQueryParam.swift */; };
+		58F083C42687BE4F00C89642 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083C32687BE4F00C89642 /* DetailViewController.swift */; };
+		58F083C62687BE5F00C89642 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083C52687BE5F00C89642 /* InstructionsViewController.swift */; };
+		58F083C82687BE6700C89642 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083C72687BE6700C89642 /* InfoViewController.swift */; };
+		58F083CB2687EA8E00C89642 /* TabRecipePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */; };
+		58F083CD26880AA700C89642 /* IngridientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CC26880AA700C89642 /* IngridientsViewController.swift */; };
+		58F083CF2688297400C89642 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CE2688297400C89642 /* NotesViewController.swift */; };
 		631262A6268589BD0012B65C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631262A5268589BD0012B65C /* SearchViewController.swift */; };
 		631262A92685A89A0012B65C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 631262A82685A89A0012B65C /* Kingfisher */; };
 		637558E82688484E00225F44 /* QueryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637558E72688484E00225F44 /* QueryDelegate.swift */; };
@@ -61,6 +67,12 @@
 		58F083BB2686CE0B00C89642 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		58F083BF2686CE1300C89642 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		58F083C12686CE3800C89642 /* SearchQueryParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQueryParam.swift; sourceTree = "<group>"; };
+		58F083C32687BE4F00C89642 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		58F083C52687BE5F00C89642 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		58F083C72687BE6700C89642 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRecipePanel.swift; sourceTree = "<group>"; };
+		58F083CC26880AA700C89642 /* IngridientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsViewController.swift; sourceTree = "<group>"; };
+		58F083CE2688297400C89642 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		631262A5268589BD0012B65C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		637558E72688484E00225F44 /* QueryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDelegate.swift; sourceTree = "<group>"; };
 		912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +146,11 @@
 				58F083752681871F00C89642 /* LaunchScreen.storyboard */,
 				58F083782681871F00C89642 /* Info.plist */,
 				631262A5268589BD0012B65C /* SearchViewController.swift */,
+				58F083C32687BE4F00C89642 /* DetailViewController.swift */,
+				58F083C52687BE5F00C89642 /* InstructionsViewController.swift */,
+				58F083C72687BE6700C89642 /* InfoViewController.swift */,
+				58F083CC26880AA700C89642 /* IngridientsViewController.swift */,
+				58F083CE2688297400C89642 /* NotesViewController.swift */,
 			);
 			path = "final-project-ios";
 			sourceTree = "<group>";
@@ -193,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				637558E72688484E00225F44 /* QueryDelegate.swift */,
+				58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -314,11 +332,17 @@
 				58F08390268415EB00C89642 /* Nutrition.swift in Sources */,
 				631262A6268589BD0012B65C /* SearchViewController.swift in Sources */,
 				58F0838E2684156D00C89642 /* Nutrient.swift in Sources */,
+				58F083C82687BE6700C89642 /* InfoViewController.swift in Sources */,
+				58F083C42687BE4F00C89642 /* DetailViewController.swift in Sources */,
 				58F083882684107700C89642 /* SearchRes.swift in Sources */,
 				58F083C02686CE1300C89642 /* Client.swift in Sources */,
 				58F0836D2681871E00C89642 /* SceneDelegate.swift in Sources */,
+				58F083C62687BE5F00C89642 /* InstructionsViewController.swift in Sources */,
+				58F083CD26880AA700C89642 /* IngridientsViewController.swift in Sources */,
+				58F083CB2687EA8E00C89642 /* TabRecipePanel.swift in Sources */,
 				58F083B82686CDF500C89642 /* Dictionary.swift in Sources */,
 				58F083BD2686CE0B00C89642 /* ApiError.swift in Sources */,
+				58F083CF2688297400C89642 /* NotesViewController.swift in Sources */,
 				58F0839826841A7100C89642 /* Step.swift in Sources */,
 				58F083C22686CE3800C89642 /* SearchQueryParam.swift in Sources */,
 				58F083942684193100C89642 /* RecipeInfo.swift in Sources */,
