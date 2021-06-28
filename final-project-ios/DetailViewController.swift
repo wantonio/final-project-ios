@@ -9,6 +9,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var ingridientsTabPanel: UIView!
     @IBOutlet weak var notesTabPanel: UIView!
     
+    var recipeId: Int?
+    var client:Client?
+    let session = URLSession.shared
+    
     lazy var currentTabPanel: UIView = {
         return infoTabPanel
     }()
@@ -24,20 +28,47 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         tabBarController?.tabBar.isHidden = true
-
-        do {
-            recipe = try loadFromBundle("recipe")
-            
-            let url = URL(string: recipe!.image)
-            recipeImage.kf.setImage(with: url)
-            
-            recipeTabs.selectedItem = recipeTabs.items?[0]
-        
-            loadTabsPanel()
-        } catch let err {
-            print(err.localizedDescription)
-        }
+        recipeTabs.selectedItem = recipeTabs.items?[0]
+        loadRecipe()
    }
+    
+    func loadRecipe() {
+        func loadRecipeView() {
+            guard let recipe = recipe else {
+                return
+            }
+            
+            let url = URL(string: recipe.image)
+            recipeImage.kf.setImage(with: url)
+            loadTabsPanel()
+        }
+        
+        if let useApi = ProcessInfo.processInfo.environment["USE_API"], useApi == "true" {
+            guard let id = recipeId else {
+                return
+            }
+            
+            client = Client(session: session)
+            client?.getRecipe(id: id, complete: { result in
+                switch result{
+                
+                case .success(let data):
+                    self.recipe = data
+                    loadRecipeView()
+                        
+                case .failure(let error):
+                    print(error)
+                }
+            })
+        } else {
+            do {
+                recipe = try loadFromBundle("recipe")
+                loadRecipeView()
+            } catch let err {
+                print(err.localizedDescription)
+            }
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if var destination = segue.destination as? TabRecipePanel {

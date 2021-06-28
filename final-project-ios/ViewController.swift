@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import JSONLoader
 
 class RecipeTableViewCell: UITableViewCell {
    
@@ -36,26 +37,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        queryInfo = SearchQueryParam(number: 50)
-        lRecipes = [RecipeInfo]()
-        client = Client(session: session)
-        client?.search(queryParams: queryInfo!, complete: { result in
-            switch result{
-            
-            case .success(let dataSearch):
-                
-                for datos in dataSearch.results{
-                    
-                    self.lRecipes?.append(RecipeInfo(id: datos.id, title: datos.title, image: datos.image, imageType: datos.imageType, nutrition: datos.nutrition, summary: datos.summary, diets: datos.diets, analyzedInstructions: datos.analyzedInstructions, extendedIngredients: datos.extendedIngredients))
-                    
-                }
-                
-                print(dataSearch)
-                    
-            case .failure(let error):
-                print(error)
-            }
-        })
+        let querySearch = SearchQueryParam(sort: "random", number: 50)
+        getRecipes(querySearch: querySearch)
     }
     
     
@@ -63,8 +46,41 @@ class ViewController: UIViewController {
             if segue.identifier == "getDataSegue" {
                 let secondVC: SearchViewController = segue.destination as! SearchViewController
                 secondVC.delegate = self
+            } else {
+                if let index = self.tableViewRecipes.indexPathForSelectedRow {
+                    let destination = segue.destination as! DetailViewController
+                    
+                    if let recipe = lRecipes?[index.row] {
+                        destination.recipeId = recipe.id
+                    }
+                }
             }
         }
+    
+    func getRecipes(querySearch:SearchQueryParam) {
+        lRecipes = [RecipeInfo]()
+        
+        if let useApi = ProcessInfo.processInfo.environment["USE_API"], useApi == "true" {
+            client = Client(session: session)
+            client?.search(queryParams: querySearch, complete: { result in
+                switch result{
+                
+                case .success(let dataSearch):
+                    self.lRecipes = dataSearch.results
+                        
+                case .failure(let error):
+                    print(error)
+                }
+            })
+        } else {
+            do {
+                let search:SearchRes = try loadFromBundle("search")
+                lRecipes = search.results
+            } catch let err {
+                print(err.localizedDescription)
+            }
+        }
+    }
 }
 
 extension ViewController:UITableViewDelegate, UITableViewDataSource {
@@ -128,25 +144,6 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
 extension ViewController:queryDelegate{
     func updateQuerySearch(querySearch:SearchQueryParam?)
     {
-        self.queryInfo = querySearch
-        lRecipes = [RecipeInfo]()
-        client = Client(session: session)
-        client?.search(queryParams: queryInfo!, complete: { result in
-            switch result{
-            
-            case .success(let dataSearch):
-                
-                for datos in dataSearch.results{
-                    
-                    self.lRecipes?.append(RecipeInfo(id: datos.id, title: datos.title, image: datos.image, imageType: datos.imageType, nutrition: datos.nutrition, summary: datos.summary, diets: datos.diets, analyzedInstructions: datos.analyzedInstructions, extendedIngredients: datos.extendedIngredients))
-                    
-                }
-                
-                print(dataSearch)
-                    
-            case .failure(let error):
-                print(error)
-            }
-        })
+        getRecipes(querySearch: querySearch!)
     }
 }
