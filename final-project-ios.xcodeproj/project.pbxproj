@@ -35,10 +35,14 @@
 		58F083C82687BE6700C89642 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083C72687BE6700C89642 /* InfoViewController.swift */; };
 		58F083CB2687EA8E00C89642 /* TabRecipePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */; };
 		58F083CD26880AA700C89642 /* IngridientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CC26880AA700C89642 /* IngridientsViewController.swift */; };
-		58F083CF2688297400C89642 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CE2688297400C89642 /* NotesViewController.swift */; };
 		631262A6268589BD0012B65C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631262A5268589BD0012B65C /* SearchViewController.swift */; };
 		631262A92685A89A0012B65C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 631262A82685A89A0012B65C /* Kingfisher */; };
 		637558E82688484E00225F44 /* QueryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637558E72688484E00225F44 /* QueryDelegate.swift */; };
+		845E611626899ECC00191C76 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611526899ECC00191C76 /* Notes.swift */; };
+		845E611826899EDB00191C76 /* MainNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611726899EDB00191C76 /* MainNotes.swift */; };
+		845E611A26899EE900191C76 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611926899EE900191C76 /* NotesViewController.swift */; };
+		845E611C26899F0A00191C76 /* MainNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611B26899F0A00191C76 /* MainNotesViewController.swift */; };
+		845E611F26899F1300191C76 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 845E611D26899F1300191C76 /* CoreData.xcdatamodeld */; };
 		EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,9 +76,13 @@
 		58F083C72687BE6700C89642 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRecipePanel.swift; sourceTree = "<group>"; };
 		58F083CC26880AA700C89642 /* IngridientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsViewController.swift; sourceTree = "<group>"; };
-		58F083CE2688297400C89642 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		631262A5268589BD0012B65C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		637558E72688484E00225F44 /* QueryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDelegate.swift; sourceTree = "<group>"; };
+		845E611526899ECC00191C76 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		845E611726899EDB00191C76 /* MainNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNotes.swift; sourceTree = "<group>"; };
+		845E611926899EE900191C76 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = "../../../../Downloads/final-project-ios-bd.v2/final-project-ios/NotesViewController.swift"; sourceTree = "<group>"; };
+		845E611B26899F0A00191C76 /* MainNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNotesViewController.swift; sourceTree = "<group>"; };
+		845E611E26899F1300191C76 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F58D07182ACC2623DC18B7B /* Pods-final-project-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.debug.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		AC498B95B8C61BA2069F3178 /* Pods-final-project-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.release.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +158,11 @@
 				58F083C52687BE5F00C89642 /* InstructionsViewController.swift */,
 				58F083C72687BE6700C89642 /* InfoViewController.swift */,
 				58F083CC26880AA700C89642 /* IngridientsViewController.swift */,
-				58F083CE2688297400C89642 /* NotesViewController.swift */,
+				845E611D26899F1300191C76 /* CoreData.xcdatamodeld */,
+				845E611926899EE900191C76 /* NotesViewController.swift */,
+				845E611526899ECC00191C76 /* Notes.swift */,
+				845E611B26899F0A00191C76 /* MainNotesViewController.swift */,
+				845E611726899EDB00191C76 /* MainNotes.swift */,
 			);
 			path = "final-project-ios";
 			sourceTree = "<group>";
@@ -322,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F0836F2681871E00C89642 /* ViewController.swift in Sources */,
+				845E611626899ECC00191C76 /* Notes.swift in Sources */,
 				58F0839626841A6500C89642 /* Instructions.swift in Sources */,
 				58F083B72686CDF500C89642 /* Encodable.swift in Sources */,
 				58F083BC2686CE0B00C89642 /* NetworkGenerics.swift in Sources */,
@@ -330,19 +343,22 @@
 				58F0836B2681871E00C89642 /* AppDelegate.swift in Sources */,
 				58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */,
 				58F08390268415EB00C89642 /* Nutrition.swift in Sources */,
+				845E611F26899F1300191C76 /* CoreData.xcdatamodeld in Sources */,
 				631262A6268589BD0012B65C /* SearchViewController.swift in Sources */,
 				58F0838E2684156D00C89642 /* Nutrient.swift in Sources */,
 				58F083C82687BE6700C89642 /* InfoViewController.swift in Sources */,
 				58F083C42687BE4F00C89642 /* DetailViewController.swift in Sources */,
 				58F083882684107700C89642 /* SearchRes.swift in Sources */,
+				845E611826899EDB00191C76 /* MainNotes.swift in Sources */,
 				58F083C02686CE1300C89642 /* Client.swift in Sources */,
 				58F0836D2681871E00C89642 /* SceneDelegate.swift in Sources */,
 				58F083C62687BE5F00C89642 /* InstructionsViewController.swift in Sources */,
 				58F083CD26880AA700C89642 /* IngridientsViewController.swift in Sources */,
 				58F083CB2687EA8E00C89642 /* TabRecipePanel.swift in Sources */,
+				845E611C26899F0A00191C76 /* MainNotesViewController.swift in Sources */,
 				58F083B82686CDF500C89642 /* Dictionary.swift in Sources */,
 				58F083BD2686CE0B00C89642 /* ApiError.swift in Sources */,
-				58F083CF2688297400C89642 /* NotesViewController.swift in Sources */,
+				845E611A26899EE900191C76 /* NotesViewController.swift in Sources */,
 				58F0839826841A7100C89642 /* Step.swift in Sources */,
 				58F083C22686CE3800C89642 /* SearchQueryParam.swift in Sources */,
 				58F083942684193100C89642 /* RecipeInfo.swift in Sources */,
@@ -579,6 +595,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		845E611D26899F1300191C76 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				845E611E26899F1300191C76 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 845E611E26899F1300191C76 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 58F0835F2681871E00C89642 /* Project object */;
 }
