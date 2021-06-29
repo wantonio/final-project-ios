@@ -35,9 +35,15 @@ class SearchViewController: UIViewController {
         let filterSearch: SearchQueryParam
         filterSearch = SearchQueryParam(query: txtQueryField.text, number: 100,
                                         minFat: Int(txtQueryFatMinField.text!),
+                                        maxFat: Int(txtQueryFatMaxField.text!),
                                         minCarbs: Int(txtQueryCarbsMinField.text!),
+                                        maxCarbs: Int(txtQueryCarbsMaxField.text!),
                                         minProtein: Int(txtQueryProteinMinField.text!),
-                                        minCalories: Int(txtQueryCaloriesMinField.text!))
+                                        maxProtein: Int(txtQueryProteinMaxField.text!),
+                                        minCalories: Int(txtQueryCaloriesMinField.text!),
+                                        maxCalories: Int(txtQueryCaloriesMaxField.text!))
+        
+                                        
        
         if self.delegate != nil {
             self.delegate?.updateQuerySearch(querySearch: filterSearch)
