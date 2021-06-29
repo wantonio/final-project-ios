@@ -8,6 +8,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var instructionTabPanel: UIView!
     @IBOutlet weak var ingridientsTabPanel: UIView!
     @IBOutlet weak var noteTabPanel: UIView!
+    @IBOutlet weak var loadingImage: UIImageView!
     
     var delegate: RecipeNotedListDelegate?
     
@@ -29,7 +30,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("the id", recipeId)
+        do {
+           try loadingImage.setGifImage(UIImage(gifName: "loading.gif"), loopCount: -1)
+        }catch {
+            print(error)
+        }
         
         tabBarController?.tabBar.isHidden = true
         recipeTabs.selectedItem = recipeTabs.items?[0]
@@ -50,6 +55,8 @@ class DetailViewController: UIViewController {
             }
             loadTabsPanel()
         }
+        
+        toggleLoading(show: true)
                 
         if let useApi = ProcessInfo.processInfo.environment["USE_API"], useApi == "true" {
             guard let id = recipeId else {
@@ -67,6 +74,8 @@ class DetailViewController: UIViewController {
                 case .failure(let error):
                     print(error)
                 }
+                
+                self.toggleLoading(show: false)
             })
         } else {
             do {
@@ -75,6 +84,8 @@ class DetailViewController: UIViewController {
             } catch let err {
                 print(err.localizedDescription)
             }
+            
+            self.toggleLoading(show: false)
         }
     }
     
@@ -107,6 +118,12 @@ class DetailViewController: UIViewController {
         performSegue(withIdentifier: "InstructionsViewController", sender: self)
         performSegue(withIdentifier: "IngridientsViewController", sender: self)
         performSegue(withIdentifier: "NoteViewController", sender: self)
+    }
+    
+    func toggleLoading(show: Bool) {
+        recipeImage.isHidden = show
+        recipeTabs.isHidden = show
+        loadingImage.isHidden = !show
     }
 }
 

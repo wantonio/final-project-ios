@@ -53,7 +53,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "USE_API"
-            value = "false"
+            value = "true"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable

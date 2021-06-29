@@ -30,16 +30,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableViewRecipes: UITableView!
     @IBOutlet weak var textFieldSearch: UITextField!
     @IBOutlet weak var loadingImage: UIImageView!
+    @IBOutlet weak var nothingFoundText: UILabel!
     
     var lRecipes:[RecipeInfo]?{
         didSet{
             self.tableViewRecipes.reloadData()
+            
+            guard let count = self.lRecipes?.count else {
+                return
+            }
+            
+            self.toggleNothingFound(show: count == 0)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        do {
+           try loadingImage.setGifImage(UIImage(gifName: "loading.gif"), loopCount: -1)
+        }catch {
+            print(error)
+        }
+
         let querySearch = SearchQueryParam(sort: "random", number: 50)
         getRecipes(querySearch: querySearch)
     }
@@ -62,6 +75,7 @@ class ViewController: UIViewController {
     
     func getRecipes(querySearch:SearchQueryParam) {
         lRecipes = [RecipeInfo]()
+        toggleLoading(show: true)
         
         if let useApi = ProcessInfo.processInfo.environment["USE_API"], useApi == "true" {
             client = Client(session: session)
@@ -72,6 +86,7 @@ class ViewController: UIViewController {
                     self.lRecipes = dataSearch.results
                         
                 case .failure(let error):
+                    self.toggleNothingFound(show: true)
                     print(error)
                 }
             })
@@ -80,9 +95,22 @@ class ViewController: UIViewController {
                 let search:SearchRes = try loadFromBundle("search")
                 lRecipes = search.results
             } catch let err {
+                self.toggleNothingFound(show: true)
                 print(err.localizedDescription)
             }
         }
+    }
+    
+    func toggleNothingFound(show: Bool) {
+        tableViewRecipes.isHidden = show
+        nothingFoundText.isHidden = !show
+        loadingImage.isHidden = true
+    }
+    
+    func toggleLoading(show: Bool) {
+        tableViewRecipes.isHidden = show
+        nothingFoundText.isHidden = true
+        loadingImage.isHidden = !show
     }
 }
 

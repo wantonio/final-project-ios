@@ -10,11 +10,15 @@ class NoteTableViewCell: UITableViewCell {
 
 class MainNotesViewController: UIViewController{
     
+    @IBOutlet weak var nothingFoundText: UILabel!
+    @IBOutlet weak var loadingImage: UIImageView!
     @IBOutlet weak var recipesTable: UITableView!
     
     var recipesNoted: [RecipeEntity] = [] {
         didSet {
             self.recipesTable.reloadData()
+            
+            self.toggleNothingFound(show: self.recipesNoted.count == 0)
         }
     }
     
@@ -26,8 +30,19 @@ class MainNotesViewController: UIViewController{
             return
         }
         
+        toggleLoading(show: true)
+        
         if let recipes = RecipeProxy.getAlltRecipes(delegate: appDelegate) {
             self.recipesNoted = recipes
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        do {
+           try loadingImage.setGifImage(UIImage(gifName: "loading.gif"), loopCount: -1)
+        }catch {
+            print(error)
         }
     }
     
@@ -39,6 +54,18 @@ class MainNotesViewController: UIViewController{
             destination.recipeId = Int(recipe.id)
             destination.delegate = self
         }
+    }
+    
+    func toggleNothingFound(show: Bool) {
+        recipesTable.isHidden = show
+        nothingFoundText.isHidden = !show
+        loadingImage.isHidden = true
+    }
+    
+    func toggleLoading(show: Bool) {
+        recipesTable.isHidden = show
+        nothingFoundText.isHidden = true
+        loadingImage.isHidden = !show
     }
 }
 
