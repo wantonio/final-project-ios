@@ -1,6 +1,8 @@
 import UIKit
 
 class InstructionsViewController: UIViewController, TabRecipePanel {
+    var delegate: RecipeNotedListDelegate?
+    
     var recipe: RecipeInfo?
 }
 

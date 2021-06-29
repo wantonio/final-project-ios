@@ -10,8 +10,8 @@ import Foundation
 struct RecipeInfo: Codable {
     var id: Int
     var title: String
-    var image: String
-    var imageType: String
+    var image: String?
+    var imageType: String?
     var nutrition: Nutrition
     var servings: Int?
     var summary: String?

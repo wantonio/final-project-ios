@@ -35,14 +35,22 @@
 		58F083C82687BE6700C89642 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083C72687BE6700C89642 /* InfoViewController.swift */; };
 		58F083CB2687EA8E00C89642 /* TabRecipePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */; };
 		58F083CD26880AA700C89642 /* IngridientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F083CC26880AA700C89642 /* IngridientsViewController.swift */; };
+		58F873BC268A533B007FB364 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873BB268A533B007FB364 /* NoteViewController.swift */; };
+		58F873BF268A5A84007FB364 /* food_placeholder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 58F873BE268A5A84007FB364 /* food_placeholder.jpeg */; };
+		58F873C2268A5BFF007FB364 /* RecipeList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58F873C0268A5BFF007FB364 /* RecipeList.xcdatamodeld */; };
+		58F873C7268A5D2F007FB364 /* RecipePersisted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873C6268A5D2F007FB364 /* RecipePersisted.swift */; };
+		58F873C9268A75A5007FB364 /* RecipeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873C8268A75A5007FB364 /* RecipeEntity.swift */; };
+		58F873CB268A7C95007FB364 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873CA268A7C95007FB364 /* UIViewController.swift */; };
+		58F873CD268A9883007FB364 /* RecipeNotedListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873CC268A9883007FB364 /* RecipeNotedListDelegate.swift */; };
+		58F873CF268AB4B8007FB364 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 58F873CE268AB4B8007FB364 /* loading.gif */; };
+		58F873D1268AB615007FB364 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873D0268AB615007FB364 /* UIImage.swift */; };
+		58F873D4268ABC58007FB364 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 58F873D3268ABC58007FB364 /* SwiftyGif */; };
 		631262A6268589BD0012B65C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631262A5268589BD0012B65C /* SearchViewController.swift */; };
 		631262A92685A89A0012B65C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 631262A82685A89A0012B65C /* Kingfisher */; };
 		637558E82688484E00225F44 /* QueryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637558E72688484E00225F44 /* QueryDelegate.swift */; };
-		845E611626899ECC00191C76 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611526899ECC00191C76 /* Notes.swift */; };
+		845E611626899ECC00191C76 /* RecipeProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611526899ECC00191C76 /* RecipeProxy.swift */; };
 		845E611826899EDB00191C76 /* MainNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611726899EDB00191C76 /* MainNotes.swift */; };
-		845E611A26899EE900191C76 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611926899EE900191C76 /* NotesViewController.swift */; };
 		845E611C26899F0A00191C76 /* MainNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E611B26899F0A00191C76 /* MainNotesViewController.swift */; };
-		845E611F26899F1300191C76 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 845E611D26899F1300191C76 /* CoreData.xcdatamodeld */; };
 		EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,13 +84,20 @@
 		58F083C72687BE6700C89642 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRecipePanel.swift; sourceTree = "<group>"; };
 		58F083CC26880AA700C89642 /* IngridientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngridientsViewController.swift; sourceTree = "<group>"; };
+		58F873BB268A533B007FB364 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		58F873BE268A5A84007FB364 /* food_placeholder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food_placeholder.jpeg; sourceTree = "<group>"; };
+		58F873C1268A5BFF007FB364 /* RecipeList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeList.xcdatamodel; sourceTree = "<group>"; };
+		58F873C6268A5D2F007FB364 /* RecipePersisted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePersisted.swift; sourceTree = "<group>"; };
+		58F873C8268A75A5007FB364 /* RecipeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEntity.swift; sourceTree = "<group>"; };
+		58F873CA268A7C95007FB364 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		58F873CC268A9883007FB364 /* RecipeNotedListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNotedListDelegate.swift; sourceTree = "<group>"; };
+		58F873CE268AB4B8007FB364 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		58F873D0268AB615007FB364 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		631262A5268589BD0012B65C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		637558E72688484E00225F44 /* QueryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDelegate.swift; sourceTree = "<group>"; };
-		845E611526899ECC00191C76 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		845E611526899ECC00191C76 /* RecipeProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeProxy.swift; sourceTree = "<group>"; };
 		845E611726899EDB00191C76 /* MainNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNotes.swift; sourceTree = "<group>"; };
-		845E611926899EE900191C76 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = "../../../../Downloads/final-project-ios-bd.v2/final-project-ios/NotesViewController.swift"; sourceTree = "<group>"; };
 		845E611B26899F0A00191C76 /* MainNotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNotesViewController.swift; sourceTree = "<group>"; };
-		845E611E26899F1300191C76 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		912A21453FAC4ED45867610A /* Pods_final_project_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final_project_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F58D07182ACC2623DC18B7B /* Pods-final-project-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.debug.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		AC498B95B8C61BA2069F3178 /* Pods-final-project-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final-project-ios.release.xcconfig"; path = "Target Support Files/Pods-final-project-ios/Pods-final-project-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				631262A92685A89A0012B65C /* Kingfisher in Frameworks */,
+				58F873D4268ABC58007FB364 /* SwiftyGif in Frameworks */,
 				EF705E23CFF3088662F98285 /* Pods_final_project_ios.framework in Frameworks */,
 				58F083802684053C00C89642 /* JSONLoader in Frameworks */,
 			);
@@ -140,6 +156,7 @@
 		58F083692681871E00C89642 /* final-project-ios */ = {
 			isa = PBXGroup;
 			children = (
+				58F873BD268A597C007FB364 /* Assets */,
 				637558E62688482C00225F44 /* Protocols */,
 				58F083BE2686CE1300C89642 /* NetworkEndpoints */,
 				58F083B92686CE0B00C89642 /* Network */,
@@ -158,11 +175,11 @@
 				58F083C52687BE5F00C89642 /* InstructionsViewController.swift */,
 				58F083C72687BE6700C89642 /* InfoViewController.swift */,
 				58F083CC26880AA700C89642 /* IngridientsViewController.swift */,
-				845E611D26899F1300191C76 /* CoreData.xcdatamodeld */,
-				845E611926899EE900191C76 /* NotesViewController.swift */,
-				845E611526899ECC00191C76 /* Notes.swift */,
+				845E611526899ECC00191C76 /* RecipeProxy.swift */,
 				845E611B26899F0A00191C76 /* MainNotesViewController.swift */,
 				845E611726899EDB00191C76 /* MainNotes.swift */,
+				58F873BB268A533B007FB364 /* NoteViewController.swift */,
+				58F873C0268A5BFF007FB364 /* RecipeList.xcdatamodeld */,
 			);
 			path = "final-project-ios";
 			sourceTree = "<group>";
@@ -188,6 +205,7 @@
 				58F0839726841A7100C89642 /* Step.swift */,
 				58F0839926841B6100C89642 /* Equipment.swift */,
 				58F0839B26841C5A00C89642 /* Ingridient.swift */,
+				58F873C6268A5D2F007FB364 /* RecipePersisted.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +215,9 @@
 			children = (
 				58F083B52686CDF500C89642 /* Encodable.swift */,
 				58F083B62686CDF500C89642 /* Dictionary.swift */,
+				58F873C8268A75A5007FB364 /* RecipeEntity.swift */,
+				58F873CA268A7C95007FB364 /* UIViewController.swift */,
+				58F873D0268AB615007FB364 /* UIImage.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -218,11 +239,21 @@
 			path = NetworkEndpoints;
 			sourceTree = "<group>";
 		};
+		58F873BD268A597C007FB364 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				58F873BE268A5A84007FB364 /* food_placeholder.jpeg */,
+				58F873CE268AB4B8007FB364 /* loading.gif */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		637558E62688482C00225F44 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				637558E72688484E00225F44 /* QueryDelegate.swift */,
 				58F083CA2687EA8E00C89642 /* TabRecipePanel.swift */,
+				58F873CC268A9883007FB364 /* RecipeNotedListDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -247,6 +278,7 @@
 			packageProductDependencies = (
 				58F0837F2684053C00C89642 /* JSONLoader */,
 				631262A82685A89A0012B65C /* Kingfisher */,
+				58F873D3268ABC58007FB364 /* SwiftyGif */,
 			);
 			productName = "final-project-ios";
 			productReference = 58F083672681871E00C89642 /* final-project-ios.app */;
@@ -278,6 +310,7 @@
 			packageReferences = (
 				58F0837E2684053B00C89642 /* XCRemoteSwiftPackageReference "JSONLoader" */,
 				631262A72685A89A0012B65C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				58F873D2268ABC58007FB364 /* XCRemoteSwiftPackageReference "SwiftyGif" */,
 			);
 			productRefGroup = 58F083682681871E00C89642 /* Products */;
 			projectDirPath = "";
@@ -294,8 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F083922684191400C89642 /* recipe.json in Resources */,
+				58F873BF268A5A84007FB364 /* food_placeholder.jpeg in Resources */,
 				58F083772681871F00C89642 /* LaunchScreen.storyboard in Resources */,
 				58F0838C2684155000C89642 /* search.json in Resources */,
+				58F873CF268AB4B8007FB364 /* loading.gif in Resources */,
 				58F083742681871F00C89642 /* Assets.xcassets in Resources */,
 				58F083722681871E00C89642 /* Main.storyboard in Resources */,
 			);
@@ -334,33 +369,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F0836F2681871E00C89642 /* ViewController.swift in Sources */,
-				845E611626899ECC00191C76 /* Notes.swift in Sources */,
+				845E611626899ECC00191C76 /* RecipeProxy.swift in Sources */,
 				58F0839626841A6500C89642 /* Instructions.swift in Sources */,
 				58F083B72686CDF500C89642 /* Encodable.swift in Sources */,
 				58F083BC2686CE0B00C89642 /* NetworkGenerics.swift in Sources */,
 				58F0839A26841B6100C89642 /* Equipment.swift in Sources */,
 				637558E82688484E00225F44 /* QueryDelegate.swift in Sources */,
 				58F0836B2681871E00C89642 /* AppDelegate.swift in Sources */,
+				58F873BC268A533B007FB364 /* NoteViewController.swift in Sources */,
 				58F0839C26841C5A00C89642 /* Ingridient.swift in Sources */,
 				58F08390268415EB00C89642 /* Nutrition.swift in Sources */,
-				845E611F26899F1300191C76 /* CoreData.xcdatamodeld in Sources */,
 				631262A6268589BD0012B65C /* SearchViewController.swift in Sources */,
 				58F0838E2684156D00C89642 /* Nutrient.swift in Sources */,
 				58F083C82687BE6700C89642 /* InfoViewController.swift in Sources */,
+				58F873CB268A7C95007FB364 /* UIViewController.swift in Sources */,
 				58F083C42687BE4F00C89642 /* DetailViewController.swift in Sources */,
 				58F083882684107700C89642 /* SearchRes.swift in Sources */,
 				845E611826899EDB00191C76 /* MainNotes.swift in Sources */,
 				58F083C02686CE1300C89642 /* Client.swift in Sources */,
 				58F0836D2681871E00C89642 /* SceneDelegate.swift in Sources */,
+				58F873C9268A75A5007FB364 /* RecipeEntity.swift in Sources */,
 				58F083C62687BE5F00C89642 /* InstructionsViewController.swift in Sources */,
 				58F083CD26880AA700C89642 /* IngridientsViewController.swift in Sources */,
+				58F873D1268AB615007FB364 /* UIImage.swift in Sources */,
+				58F873C7268A5D2F007FB364 /* RecipePersisted.swift in Sources */,
 				58F083CB2687EA8E00C89642 /* TabRecipePanel.swift in Sources */,
 				845E611C26899F0A00191C76 /* MainNotesViewController.swift in Sources */,
+				58F873CD268A9883007FB364 /* RecipeNotedListDelegate.swift in Sources */,
 				58F083B82686CDF500C89642 /* Dictionary.swift in Sources */,
 				58F083BD2686CE0B00C89642 /* ApiError.swift in Sources */,
-				845E611A26899EE900191C76 /* NotesViewController.swift in Sources */,
 				58F0839826841A7100C89642 /* Step.swift in Sources */,
 				58F083C22686CE3800C89642 /* SearchQueryParam.swift in Sources */,
+				58F873C2268A5BFF007FB364 /* RecipeList.xcdatamodeld in Sources */,
 				58F083942684193100C89642 /* RecipeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +613,14 @@
 				kind = branch;
 			};
 		};
+		58F873D2268ABC58007FB364 /* XCRemoteSwiftPackageReference "SwiftyGif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kirualex/SwiftyGif.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		631262A72685A89A0012B65C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -589,6 +637,11 @@
 			package = 58F0837E2684053B00C89642 /* XCRemoteSwiftPackageReference "JSONLoader" */;
 			productName = JSONLoader;
 		};
+		58F873D3268ABC58007FB364 /* SwiftyGif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58F873D2268ABC58007FB364 /* XCRemoteSwiftPackageReference "SwiftyGif" */;
+			productName = SwiftyGif;
+		};
 		631262A82685A89A0012B65C /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 631262A72685A89A0012B65C /* XCRemoteSwiftPackageReference "Kingfisher" */;
@@ -597,13 +650,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		845E611D26899F1300191C76 /* CoreData.xcdatamodeld */ = {
+		58F873C0268A5BFF007FB364 /* RecipeList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				845E611E26899F1300191C76 /* CoreData.xcdatamodel */,
+				58F873C1268A5BFF007FB364 /* RecipeList.xcdatamodel */,
 			);
-			currentVersion = 845E611E26899F1300191C76 /* CoreData.xcdatamodel */;
-			path = CoreData.xcdatamodeld;
+			currentVersion = 58F873C1268A5BFF007FB364 /* RecipeList.xcdatamodel */;
+			path = RecipeList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

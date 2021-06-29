@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import JSONLoader
+import SwiftyGif
 
 class RecipeTableViewCell: UITableViewCell {
    
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
     var queryInfo: SearchQueryParam?
     @IBOutlet weak var tableViewRecipes: UITableView!
     @IBOutlet weak var textFieldSearch: UITextField!
+    @IBOutlet weak var loadingImage: UIImageView!
     
     var lRecipes:[RecipeInfo]?{
         didSet{
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let querySearch = SearchQueryParam(sort: "random", number: 50)
         getRecipes(querySearch: querySearch)
     }
@@ -128,8 +131,11 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-        let url = URL(string: recipesData!.image)
-        cell.imageViewCell.kf.setImage(with: url)
+        if let imageStr = recipesData!.image {
+            let url = URL(string: imageStr)
+            cell.imageViewCell.kf.setImage(with: url)
+        }
+        
         cell.lblTitleRecipe?.text = recipesData?.title
         cell.lblFatRecipe?.text =  "Fat: " + String(format: "%.2f", _fatQty)
         cell.lblCarbsRecipe?.text = "Carbs: " + String(format: "%.2f", _carbsQty)

@@ -2,6 +2,8 @@ import UIKit
 import Kingfisher
 
 class InfoViewController: UIViewController, TabRecipePanel {
+    var delegate: RecipeNotedListDelegate?
+    
     var recipe: RecipeInfo?
     
     @IBOutlet weak var recipeTitle: UILabel!

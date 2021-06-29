@@ -1,20 +1,23 @@
-//
-//  MainNotesViewController.swift
-//  final-project-ios
-//
-//  Created by Admin on 28/6/21.
-//
-
 import UIKit
-import CoreData
+
+class NoteTableViewCell: UITableViewCell {
+    @IBOutlet weak var recipeTitle: UILabel!
+    @IBOutlet weak var noteText: UILabel!
+    @IBOutlet weak var updatedDate: UILabel!
+    @IBOutlet weak var imageViewCell: UIImageView!
+}
 
 
-class MainNotesViewController: UIViewController     {
-   /*
+class MainNotesViewController: UIViewController{
     
-   
-  
-    var notes: [NSManagedObject] = []
+    @IBOutlet weak var recipesTable: UITableView!
+    
+    var recipesNoted: [RecipeEntity] = [] {
+        didSet {
+            self.recipesTable.reloadData()
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,75 +26,68 @@ class MainNotesViewController: UIViewController     {
             return
         }
         
-        if let usersDatabase = MainNotesProxy.getMainNotes(delegate: appDelegate) {
-            self.notes = usersDatabase
+        if let recipes = RecipeProxy.getAlltRecipes(delegate: appDelegate) {
+            self.recipesNoted = recipes
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     
-    
-
-    
-    
-    
-    
-    
-
-    
-    
-    
-    @IBAction func addMainNote5(_ sender: Any) {
-        let alert = UIAlertController(title: "New Note", message: "Add Note", preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: "Save", style: .default) { action in
-            guard let textField = alert.textFields?.first, let note = textField.text else {
-                return
-            }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let index = self.recipesTable.indexPathForSelectedRow {
+            let destination = segue.destination as! DetailViewController
             
-            self.saveMainNote(note: note)
-            self.tableView.reloadData()
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        alert.addTextField()
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        self.present(alert, animated: true)
-    }
-    
-    func saveMainNote(note: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let note = MainNotesProxy.saveMainNote(note: note, delegate: appDelegate)
-        
-        if  note != nil {
-            self.notes.append(note!)
+            let recipe = recipesNoted[index.row]
+            destination.recipeId = Int(recipe.id)
+            destination.delegate = self
         }
     }
-    
 }
 
-extension MainNotesViewController: UITableViewDataSource {
+extension MainNotesViewController:UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return recipesNoted.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let note = notes[indexPath.row]
+        let cell = recipesTable.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)as! NoteTableViewCell
         
-        cell.textLabel?.text = note.value(forKeyPath: "note") as? String
+        let recipesData = recipesNoted[indexPath.row]
+        
+        if let imageStr = recipesData.image {
+            let url = URL(string: imageStr)
+            cell.imageViewCell.kf.setImage(with: url)
+        }
+        
+        cell.recipeTitle.text = recipesData.title!
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let date = dateFormatter.string(from: recipesData.updatedDate!)
+        
+        cell.updatedDate.text = date
+        cell.noteText.text = recipesData.note
         
         return cell
     }
+}
+
+extension MainNotesViewController: RecipeNotedListDelegate {
+    func addRecipeNoted(recipe: RecipeEntity) {
+        recipesNoted.insert(recipe, at: 0)
+    }
     
-    */
+    func updateRecipeNoted(recipe: RecipeEntity) {
+        if let index = self.recipesTable.indexPathForSelectedRow {
+            recipesNoted[index.row] = recipe
+        }
+    }
     
+    func removeRecipeNoted() {
+        if let index = self.recipesTable.indexPathForSelectedRow {
+            recipesNoted.remove(at: index.row)
+        }
+    }
 }

@@ -7,6 +7,8 @@ class IngridientCell: UICollectionViewCell {
 }
 
 class IngridientsViewController: UIViewController, TabRecipePanel {
+    var delegate: RecipeNotedListDelegate?
+    
     @IBOutlet weak var visibleView: UIView!
     @IBOutlet weak var servingText: UILabel!
     var recipe: RecipeInfo?

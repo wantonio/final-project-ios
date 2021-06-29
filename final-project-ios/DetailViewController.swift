@@ -7,7 +7,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var infoTabPanel: UIView!
     @IBOutlet weak var instructionTabPanel: UIView!
     @IBOutlet weak var ingridientsTabPanel: UIView!
-    @IBOutlet weak var notesTabPanel: UIView!
+    @IBOutlet weak var noteTabPanel: UIView!
+    
+    var delegate: RecipeNotedListDelegate?
     
     var recipeId: Int?
     var client:Client?
@@ -27,6 +29,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("the id", recipeId)
+        
         tabBarController?.tabBar.isHidden = true
         recipeTabs.selectedItem = recipeTabs.items?[0]
         loadRecipe()
@@ -38,11 +42,15 @@ class DetailViewController: UIViewController {
                 return
             }
             
-            let url = URL(string: recipe.image)
-            recipeImage.kf.setImage(with: url)
+            if let imageStr = recipe.image {
+                let url = URL(string: imageStr)
+                recipeImage.kf.setImage(with: url)
+            } else {
+                print("no image!!")
+            }
             loadTabsPanel()
         }
-        
+                
         if let useApi = ProcessInfo.processInfo.environment["USE_API"], useApi == "true" {
             guard let id = recipeId else {
                 return
@@ -73,12 +81,13 @@ class DetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if var destination = segue.destination as? TabRecipePanel {
             destination.recipe = recipe
+            destination.delegate = delegate
         }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         switch identifier {
-        case "InfoViewController", "InstructionsViewController", "IngridientsViewController", "NotesViewController":
+        case "InfoViewController", "InstructionsViewController", "IngridientsViewController", "NoteViewController":
             guard let _ = recipe else {
                 return false
             }
@@ -97,7 +106,7 @@ class DetailViewController: UIViewController {
         performSegue(withIdentifier: "InfoViewController", sender: self)
         performSegue(withIdentifier: "InstructionsViewController", sender: self)
         performSegue(withIdentifier: "IngridientsViewController", sender: self)
-        performSegue(withIdentifier: "NotesViewController", sender: self)
+        performSegue(withIdentifier: "NoteViewController", sender: self)
     }
 }
 
@@ -116,7 +125,7 @@ extension DetailViewController: UITabBarDelegate {
         case "Ingridients":
             showTabPanel(tabPanel: ingridientsTabPanel)
         case "Notes":
-            showTabPanel(tabPanel: notesTabPanel)
+            showTabPanel(tabPanel: noteTabPanel)
         default:
             return
         }
