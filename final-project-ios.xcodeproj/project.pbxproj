@@ -42,9 +42,9 @@
 		58F873C9268A75A5007FB364 /* RecipeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873C8268A75A5007FB364 /* RecipeEntity.swift */; };
 		58F873CB268A7C95007FB364 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873CA268A7C95007FB364 /* UIViewController.swift */; };
 		58F873CD268A9883007FB364 /* RecipeNotedListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873CC268A9883007FB364 /* RecipeNotedListDelegate.swift */; };
-		58F873D1268AB615007FB364 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F873D0268AB615007FB364 /* UIImage.swift */; };
 		58F873D4268ABC58007FB364 /* SwiftyGif in Frameworks */ = {isa = PBXBuildFile; productRef = 58F873D3268ABC58007FB364 /* SwiftyGif */; };
 		58F873DA268AC797007FB364 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 58F873D9268AC797007FB364 /* loading.gif */; };
+		58F873DC268B9BB4007FB364 /* API-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 58F873DB268B9BB4007FB364 /* API-Info.plist */; };
 		631262A6268589BD0012B65C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631262A5268589BD0012B65C /* SearchViewController.swift */; };
 		631262A92685A89A0012B65C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 631262A82685A89A0012B65C /* Kingfisher */; };
 		637558E82688484E00225F44 /* QueryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637558E72688484E00225F44 /* QueryDelegate.swift */; };
@@ -91,8 +91,8 @@
 		58F873C8268A75A5007FB364 /* RecipeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEntity.swift; sourceTree = "<group>"; };
 		58F873CA268A7C95007FB364 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		58F873CC268A9883007FB364 /* RecipeNotedListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNotedListDelegate.swift; sourceTree = "<group>"; };
-		58F873D0268AB615007FB364 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		58F873D9268AC797007FB364 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../../../Downloads/loading.gif; sourceTree = "<group>"; };
+		58F873DB268B9BB4007FB364 /* API-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "API-Info.plist"; sourceTree = "<group>"; };
 		631262A5268589BD0012B65C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		637558E72688484E00225F44 /* QueryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryDelegate.swift; sourceTree = "<group>"; };
 		845E611526899ECC00191C76 /* RecipeProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeProxy.swift; sourceTree = "<group>"; };
@@ -180,6 +180,7 @@
 				845E611726899EDB00191C76 /* MainNotes.swift */,
 				58F873BB268A533B007FB364 /* NoteViewController.swift */,
 				58F873C0268A5BFF007FB364 /* RecipeList.xcdatamodeld */,
+				58F873DB268B9BB4007FB364 /* API-Info.plist */,
 			);
 			path = "final-project-ios";
 			sourceTree = "<group>";
@@ -217,7 +218,6 @@
 				58F083B62686CDF500C89642 /* Dictionary.swift */,
 				58F873C8268A75A5007FB364 /* RecipeEntity.swift */,
 				58F873CA268A7C95007FB364 /* UIViewController.swift */,
-				58F873D0268AB615007FB364 /* UIImage.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -332,6 +332,7 @@
 				58F0838C2684155000C89642 /* search.json in Resources */,
 				58F873DA268AC797007FB364 /* loading.gif in Resources */,
 				58F083742681871F00C89642 /* Assets.xcassets in Resources */,
+				58F873DC268B9BB4007FB364 /* API-Info.plist in Resources */,
 				58F083722681871E00C89642 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +392,6 @@
 				58F873C9268A75A5007FB364 /* RecipeEntity.swift in Sources */,
 				58F083C62687BE5F00C89642 /* InstructionsViewController.swift in Sources */,
 				58F083CD26880AA700C89642 /* IngridientsViewController.swift in Sources */,
-				58F873D1268AB615007FB364 /* UIImage.swift in Sources */,
 				58F873C7268A5D2F007FB364 /* RecipePersisted.swift in Sources */,
 				58F083CB2687EA8E00C89642 /* TabRecipePanel.swift in Sources */,
 				845E611C26899F0A00191C76 /* MainNotesViewController.swift in Sources */,

@@ -1,13 +1,5 @@
-//
-//  ViewController.swift
-//  final-project-ios
-//
-//  Created by Walter Calderon on 21/6/21.
-//
-
 import UIKit
 import Kingfisher
-import JSONLoader
 import SwiftyGif
 
 class RecipeTableViewCell: UITableViewCell {
@@ -76,29 +68,18 @@ class ViewController: UIViewController {
     func getRecipes(querySearch:SearchQueryParam) {
         lRecipes = [RecipeInfo]()
         toggleLoading(show: true)
-        
-        if let useApi = ProcessInfo.processInfo.environment["USE_API"], useApi == "true" {
-            client = Client(session: session)
-            client?.search(queryParams: querySearch, complete: { result in
-                switch result{
-                
-                case .success(let dataSearch):
-                    self.lRecipes = dataSearch.results
-                        
-                case .failure(let error):
-                    self.toggleNothingFound(show: true)
-                    print(error)
-                }
-            })
-        } else {
-            do {
-                let search:SearchRes = try loadFromBundle("search")
-                lRecipes = search.results
-            } catch let err {
+        client = Client(session: session)
+        client?.search(queryParams: querySearch, complete: { result in
+            switch result{
+            
+            case .success(let dataSearch):
+                self.lRecipes = dataSearch.results
+                    
+            case .failure(let error):
                 self.toggleNothingFound(show: true)
-                print(err.localizedDescription)
+                print(error)
             }
-        }
+        })
     }
     
     func toggleNothingFound(show: Bool) {

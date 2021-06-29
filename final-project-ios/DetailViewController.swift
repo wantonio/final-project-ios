@@ -42,51 +42,32 @@ class DetailViewController: UIViewController {
    }
     
     func loadRecipe() {
-        func loadRecipeView() {
-            guard let recipe = recipe else {
-                return
-            }
-            
-            if let imageStr = recipe.image {
-                let url = URL(string: imageStr)
-                recipeImage.kf.setImage(with: url)
-            } else {
-                print("no image!!")
-            }
-            loadTabsPanel()
-        }
-        
         toggleLoading(show: true)
                 
-        if let useApi = ProcessInfo.processInfo.environment["USE_API"], useApi == "true" {
-            guard let id = recipeId else {
-                return
-            }
+        guard let id = recipeId else {
+            return
+        }
+        
+        client = Client(session: session)
+        client?.getRecipe(id: id, complete: { result in
+            switch result{
             
-            client = Client(session: session)
-            client?.getRecipe(id: id, complete: { result in
-                switch result{
+            case .success(let recipe):
+                self.recipe = recipe
                 
-                case .success(let data):
-                    self.recipe = data
-                    loadRecipeView()
-                        
-                case .failure(let error):
-                    print(error)
+                if let imageStr = recipe.image {
+                    let url = URL(string: imageStr)
+                    self.recipeImage.kf.setImage(with: url)
                 }
                 
-                self.toggleLoading(show: false)
-            })
-        } else {
-            do {
-                recipe = try loadFromBundle("recipe")
-                loadRecipeView()
-            } catch let err {
-                print(err.localizedDescription)
+                self.loadTabsPanel()
+                    
+            case .failure(let error):
+                print(error)
             }
             
             self.toggleLoading(show: false)
-        }
+        })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
