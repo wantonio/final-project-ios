@@ -7,28 +7,25 @@ class Client: NetworkGeneric {
     
     private var apiKey: String {
       get {
-        guard let filePath = Bundle.main.path(forResource: "API-Info", ofType: "plist") else {
-          fatalError("Couldn't find file 'API-Info.plist'.")
-        }
-        let plist = NSDictionary(contentsOfFile: filePath)
-        guard let value = plist?.object(forKey: "API_KEY") as? String else {
-          fatalError("Couldn't find key 'API_KEY' in 'API-Info.plist'.")
-        }
-        return value
+        return Client.getValueAPIInfo(key: "API_KEY")
       }
     }
     
     private var isDevelopment: Bool {
       get {
+        return Client.getValueAPIInfo(key: "DEVELOPMENT")
+      }
+    }
+    
+    static func getValueAPIInfo<T>(key: String) -> T{
         guard let filePath = Bundle.main.path(forResource: "API-Info", ofType: "plist") else {
           fatalError("Couldn't find file 'API-Info.plist'.")
         }
         let plist = NSDictionary(contentsOfFile: filePath)
-        guard let value = plist?.object(forKey: "DEVELOPMENT") as? Bool else {
-          fatalError("Couldn't find key 'DEVELOPMENT' in 'API-Info.plist'.")
+        guard let value = plist?.object(forKey: key) as? T else {
+          fatalError("Couldn't find key '\(key)' in 'API-Info.plist'.")
         }
         return value
-      }
     }
     
     init(session: URLSession) {
